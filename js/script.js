@@ -69,7 +69,7 @@ function getRandomQuote() {
 function printQuote() {
   let finalQuote = getRandomQuote();
   let message = '';
-  message += '<p class="quotes">' + finalQuote.quote + '</p>';
+  message += '<p class="quote">' + finalQuote.quote + '</p>';
   message += '<p class="source">' + finalQuote.source; 
   if (finalQuote.citation) {
       message += '<span class="citation">' + finalQuote.citation + '</span>';
