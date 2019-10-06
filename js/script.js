@@ -48,10 +48,8 @@ let quotes = [
 ***/
 function getRandomQuote() {
   let randomNumber = Math.floor(Math.random() * (quotes.length));
-  for (let i = 0; i < quotes.length; i++){
-      let randomQuote = quotes[randomNumber];
-      return randomQuote;
-  }
+  let randomQuote = quotes[randomNumber]
+  return randomQuote;
 }
 
 
@@ -69,17 +67,17 @@ function getRandomQuote() {
    - Set the `innerHTML` of the `quote-box` div to the HTML string. 
 ***/
 function printQuote() {
-  let message = '';
   let finalQuote = getRandomQuote();
-  message = "<p class='quotes'>" + finalQuote.quote + "</p>";
-  message += "<p class='source'>" + finalQuote.source; 
+  let message = '';
+  message += '<p class="quotes">' + finalQuote.quote + '</p>';
+  message += '<p class="source">' + finalQuote.source; 
   if (finalQuote.citation) {
-      message += "<span class='citation'>" + finalQuote.citation + "</span>";
+      message += '<span class="citation">' + finalQuote.citation + '</span>';
 }
   if (finalQuote.year) {
-    message += "<span class='year'>" + finalQuote.year + "</span>";
+    message += '<span class="year">' + finalQuote.year + '</span>';
 }
-    message += "</p>";
+    message += '</p>';
     document.getElementById("quote-box").innerHTML = message;
     return message;
 }
