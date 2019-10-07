@@ -63,17 +63,17 @@ function printQuote() {
   let finalQuote = getRandomQuote();
   randomColors();
   let message = '';
-  message += '<p class="quote">' + finalQuote.quote + '</p><br>';
+  message += '<p class="quote">' + finalQuote.quote + '</p>';
   message += '<p class="source">' + finalQuote.source + '<br>'; 
   // Using if statements to add citation, year, and tags if they are present in the array of objects.
   if (finalQuote.citation) {
-      message += '<span class="citation">' + finalQuote.citation + '</span><br>';
+      message += '<span class="citation">' + finalQuote.citation + '</span>';
 }
   if (finalQuote.year) {
     message += '<span class="year">' + finalQuote.year + '</span><br>';
 }
   if (finalQuote.tag){
-    message += '<span class="tag">' + finalQuote.tag + ' </span><br>';
+    message += '<span class="tag">' + finalQuote.tag + ' </span>';
   }
     message += '</p>';
     //targeting the div
